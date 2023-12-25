@@ -1,0 +1,45 @@
+@define-color bg     #1a1a1a;
+@define-color bg-hi  #425b82;
+@define-color txt    #ffffff;
+
+*{
+    font-family: "pango" monospace;
+    font-size: 16px;
+}
+
+window {
+    border: 1px solid @bg;
+}
+
+#input {
+    margin-bottom: 15px;
+    padding:3px;
+    border-radius: 5px;
+    border:none;
+    color: @bg-hi;
+}
+
+#inner-box {
+    background-color: @bg;
+}
+
+#outer-box {
+    margin: 1px;
+    padding:15px;
+    background-color: @bg;
+}
+
+#text {
+    padding: 5px;
+    color: @highlight;
+}
+
+#entry:nth-child() {
+    color: @base1;
+}
+
+#entry:selected {
+    border: 2px solid @highlight;
+    background-color: @bg-hi
+}
+

@@ -1,0 +1,48 @@
+* {
+    font-family: "pango", monospace;
+    font-size: 16px;
+}
+
+window#waybar {
+    background: #000000;
+    color: #fdf6e3;
+}
+
+
+#battery {
+    color: #ffffff;
+}
+#battery.warning {
+    color: #cf8080;
+}
+#battery.critical {
+    color: #ff0000;
+}
+#network {
+    color: #00ff00;
+}
+#network.disabled {
+    color: #ff0000;
+}
+#network.disconnected {
+    color: #ffffff;
+}
+#workspaces button {
+    background: #1a1a1a;
+    border-radius: 0px;
+    color: #8d8683;
+    padding: 0 2px;
+}
+#workspaces button.focused {
+    background: #425b82;
+    color: #ffffff;
+    border: #ffffff;
+}
+#workspaces button:hover {
+    box-shadow: inherit;
+    text-shadow: inherit;
+
+    background: #425b82;
+    color: #ffffff;
+}
+

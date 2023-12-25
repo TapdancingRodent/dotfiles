@@ -1,0 +1,106 @@
+// -*- mode: ? -*-
+
+{
+    "layer": "top",
+    "position": "bottom",
+    "spacing": 5,
+
+    "modules-left": [
+        "sway/workspaces"
+    ],
+    "modules-right": [
+        "network#ethernet",
+        "custom/divider",
+        "network#wifi",
+        "custom/divider",
+        "battery",
+        "custom/divider",
+        "pulseaudio",
+        "custom/divider",
+        "disk",
+        "custom/divider",
+        "cpu",
+        "custom/divider",
+        "memory",
+        "custom/divider",
+        "temperature",
+        "custom/divider",
+        "clock",
+        "custom/divider",
+        "tray"
+    ],
+
+    "sway/workspaces": {
+        "disable-scroll": true,
+        "format": "{name}"
+    },
+
+    "battery": {
+        "interval": 5,
+        "states": {
+            "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity:3}% {icon}",
+        "format-charging": "{capacity:3}% ",
+        "format-icons": [
+            "",
+            "",
+            "",
+            "",
+            ""
+        ]
+    },
+    "clock": {
+        "format": "{:%Y-%m-%d %H:%M}",
+        "tooltip": false
+    },
+    "cpu": {
+        "interval": 1,
+        "format": "{icon0}{icon1}{icon2}{icon3}{icon4}{icon5}{icon6}{icon7}{usage:3}% ",
+        "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"]
+    },
+    "custom/divider": {
+        "format": "|",
+        "tooltip": false
+    },
+    "disk": {
+        "interval": 5,
+        "format": "{free} 🖴",
+        "path": "/"
+    },
+    "memory": {
+        "interval": 1,
+        "format": "{percentage:3}% "
+    },
+    "network#ethernet": {
+        "interface": "eth0",
+        "format-disconnected": "down ",
+        "format-ethernet": "{essid} "
+    },
+    "network#wifi": {
+        "interface": "wlan0",
+        "format-disconnected": "",
+        "format-wifi": "{essid} ",
+        "tooltip-format-wifi": "{essid} {signalStrength:2}%"
+    },
+    "pulseaudio": {
+        "format": "{volume:3}% {icon}",
+        "format-bluetooth": "{volume:3}%  {icon}",
+        "format-icons": {
+            "default": [
+                "",
+                ""
+            ],
+            "headphones": ""
+        },
+        "format-muted": "MUTE {icon}",
+        "on-click": "pamixer -t",
+        "on-click-right": "pavucontrol",
+        "scroll-step": 5
+    },
+    "tray": {
+        "icon-size": 20
+    }
+}
