@@ -19,9 +19,9 @@ output {
 
 ### Idle configuration
 exec swayidle -w \
-    timeout 600 'swaylock -f -c 141428' \
+    timeout 600 'swaylock -f -c 212F3C' \
     timeout 1200 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
-    before-sleep 'swaylock -f -c 141428'
+    before-sleep 'swaylock -f -c 212F3C'
 
 for_window {
     [class="^.*"] inhibit_idle fullscreen
@@ -156,7 +156,7 @@ bindsym {
     $mod+Shift+c reload
 
     # lock the screen
-    $mod+Ctrl+q exec 'swaylock -f -c 141428'
+    $mod+Ctrl+q exec 'swaylock -f -c 212F3C'
 }
 
 # exit
@@ -165,10 +165,10 @@ bindsym $mod+Shift+e exec swaynag \
     -m 'Exit sway? This will end your Wayland session.' \
     -Z 'Shutdown' 'sudo shutdown -h now' \
     -Z 'Reboot' 'sudo reboot' \
-    -Z 'Hibernate' 'systemctl suspend-then-hibernate' \
-    -Z 'Suspend' 'systemctl suspend' \
+    -Z 'Hibernate' 'systemctl hibernate' \
+    -Z 'Suspend' 'systemctl suspend-then-hibernate' \
     -Z 'Logout' 'swaymsg exit' \
-    -Z 'Lock' 'swaylock -f -c 141428'
+    -Z 'Lock' 'swaylock -f -c 212F3C'
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
