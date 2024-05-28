@@ -217,6 +217,8 @@ bar {
     swaybar_command waybar
 }
 
+include @sysconfigdir@/sway/config.d/*
+
 # Configure tray applet start
 exec_always --no-startup-id "~/.config/sway/tray.sh"
 
