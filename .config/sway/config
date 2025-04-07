@@ -207,8 +207,8 @@ input type:touchpad {
 }
 
 input type:keyboard {
-    xkb_layout "us,gr"
-    xkb_variant "altgr_intl"
+    xkb_model "pc105"
+    xkb_layout "gb,gr"
     xkb_options "altwin:swap_lalt_lwin"
 }
 
