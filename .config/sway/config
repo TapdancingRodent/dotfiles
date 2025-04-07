@@ -212,6 +212,12 @@ input type:keyboard {
     xkb_options "altwin:swap_lalt_lwin"
 }
 
+input type:pointer {
+    dwt enabled
+    accel_profile "flat" # disable mouse acceleration (enabled by default; to set it manually, use "adaptive" instead of "flat")
+    pointer_accel 0.1 # set mouse sensitivity (between -1 and 1)
+}
+
 ### Bars
 bar {
     swaybar_command waybar
