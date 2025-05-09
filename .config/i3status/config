@@ -15,6 +15,7 @@ general {
 order += "ethernet _first_"
 order += "wireless _first_"
 order += "battery all"
+order += "volume master"
 order += "disk /"
 order += "load"
 order += "cpu_temperature 0"
@@ -22,41 +23,47 @@ order += "memory"
 order += "tztime local"
 
 battery all {
-        format = "%status %percentage"
-	low_threshold = 20
+        format = "%percentage %status" 
+        low_threshold = 20
         threshold_type = percentage
         integer_battery_capacity = true
 }
 
 cpu_temperature 0 {
-	format = "T: %degreesC"
+	format = "%degreesC"
         path = "/sys/devices/platform/coretemp.0/hwmon/hwmon*/temp1_input"
 }
 
 disk "/" {
-        format = "DISK %avail"
+        format = "%avail DISK"
 }
 
 ethernet _first_ {
-        format_up = "E: (%speed)"
-        format_down = "E: down"
+        format_up = "(%speed) ETH"
+        format_down = "down ETH"
         color_bad = "#bbbbbb"
 }
 
 load {
-        format = "LOAD %1min"
+        format = "%1min LOAD"
         max_threshold = "1.0"
 }
 
 memory {
-        format = "RAM %percentage_used"
+        format = "%percentage_used RAM"
 }
 
 tztime local {
-        format = "%Y-%m-%d %H:%M:%S"
+        format = "%Y-%m-%d %H:%M"
+}
+
+volume master {
+        format = "%volume VOL"
+        format_muted = "MUTE VOL"
+        device = "default"
 }
 
 wireless _first_ {
-        format_up = "W: (%quality at %essid)"
-        format_down = "W: down"
+        format_up = "%quality at %essid"
+        format_down = "down WIFI"
 }

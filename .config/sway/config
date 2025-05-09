@@ -156,7 +156,7 @@ bindsym {
     $mod+Shift+c reload
 
     # lock the screen
-    $mod+Ctrl+q exec 'swaylock -f -c 212F3C'
+    Alt+Ctrl+q exec 'swaylock -f -c 212F3C'
 }
 
 # exit
@@ -209,7 +209,6 @@ input type:touchpad {
 input type:keyboard {
     xkb_model "pc105"
     xkb_layout "gb,gr"
-    xkb_options "altwin:swap_lalt_lwin"
 }
 
 input type:pointer {
