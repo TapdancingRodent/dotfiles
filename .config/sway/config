@@ -70,6 +70,18 @@ bindsym {
     $mod+Shift+Up move up
     $mod+Shift+Right move right
 
+    # move focus
+    $mod+j focus left
+    $mod+k focus down
+    $mod+l focus up
+    $mod+semicolon focus right
+
+    # move focused window
+    $mod+Shift+j move left
+    $mod+Shift+k move down
+    $mod+Shift+l move up
+    $mod+Shift+semicolon move right
+
     # switch split strategy to horizontal orientation
     $mod+h split h
 
