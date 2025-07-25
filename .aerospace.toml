@@ -91,7 +91,9 @@ automatically-unhide-macos-hidden-apps = true
     alt-7 = 'workspace 7'
     alt-8 = 'workspace 8'
     alt-9 = 'workspace 9'
-    alt-0 = 'workspace 10'
+    alt-0 = 'workspace 0'
+    alt-minus = 'workspace −' # - is reserved, this is true minus (unicode 2212)
+    alt-equal = 'workspace =' # + is reserved, this is true minus (unicode 2212)
 
     alt-shift-1 = 'move-node-to-workspace 1'
     alt-shift-2 = 'move-node-to-workspace 2'
@@ -102,7 +104,9 @@ automatically-unhide-macos-hidden-apps = true
     alt-shift-7 = 'move-node-to-workspace 7'
     alt-shift-8 = 'move-node-to-workspace 8'
     alt-shift-9 = 'move-node-to-workspace 9'
-    alt-shift-0 = 'move-node-to-workspace 10'
+    alt-shift-0 = 'move-node-to-workspace 0'
+    alt-shift-minus = 'move-node-to-workspace −' # - is reserved, this is true minus (unicode 2212)
+    alt-shift-equal = 'move-node-to-workspace =' # - is reserved, this is true minus (unicode 2212)
 
     alt-ctrl-1 = 'move-workspace-to-monitor 1'
     alt-ctrl-2 = 'move-workspace-to-monitor 2'
@@ -130,6 +134,10 @@ automatically-unhide-macos-hidden-apps = true
     10 = ['^built-in retina display$', 2]
 
 [[on-window-detected]]
+    if.app-id = 'com.google.Chrome'
+    run = 'move-node-to-workspace 1'
+
+[[on-window-detected]]
     if.window-title-regex-substring = 'Learning - Google Chrome'
     run = 'move-node-to-workspace 4'
 
@@ -150,13 +158,13 @@ automatically-unhide-macos-hidden-apps = true
     run = 'move-node-to-workspace 9'
 
 [[on-window-detected]]
-    if.window-title-regex-substring = 'Outlook - Google Chrome'
-    run = 'move-node-to-workspace 10'
+    if.app-id = 'com.microsoft.Outlook'
+    run = 'move-node-to-workspace 0'
 
 [[on-window-detected]]
     if.app-id = 'com.tinyspeck.slackmacgap'
-    run = 'move-node-to-workspace 10'
+    run = 'move-node-to-workspace 0'
 
 [[on-window-detected]]
-    if.app-id = 'com.google.Chrome'
-    run = 'move-node-to-workspace 1'
+    if.window-title-regex-substring = 'Sounds - Google Chrome'
+    run = 'move-node-to-workspace −' # - is reserved, this is true minus (unicode 2212)
