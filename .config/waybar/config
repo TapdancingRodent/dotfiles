@@ -6,7 +6,8 @@
     "spacing": 5,
 
     "modules-left": [
-        "sway/workspaces"
+        "sway/workspaces",
+        "sway/mode"
     ],
     "modules-right": [
         "network#ethernet",
