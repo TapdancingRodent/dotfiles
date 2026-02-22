@@ -13,8 +13,13 @@ client.unfocused #000000 #000000 #ffffff
 
 ### Output configuration
 output {
-    eDP-1 bg /home/sardines/Pictures/Backgrounds/2a8521aeaff1af02d55935d10fee1d82f9f7b433_darkened.jpeg fill
-    eDP-1 resolution 2256x1504 position 2256,0 scale 1.5
+    eDP-1 {
+        bg /home/sardines/Pictures/Backgrounds/2a8521aeaff1af02d55935d10fee1d82f9f7b433_darkened.jpeg fill
+        resolution 2256x1504 position 1920,0 scale 1.5
+    }
+    'Dell Inc. DELL P2419H 47FSH73' {
+        resolution 1920x1080 position 0,0 scale 1
+    }
 }
 
 ### Idle configuration
@@ -140,11 +145,8 @@ bindsym {
     $mod+Shift+minus move container to workspace number $ws11
     $mod+Shift+equal move container to workspace number $ws12
 
-    $mod+Ctrl+j workspace prev_on_output
-    $mod+Ctrl+semicolon workspace next_on_output
-
-    $mod+Ctrl+Shift+j move workspace to output previous
-    $mod+Ctrl+Shift+semicolon move workspace to output next
+    $mod+Ctrl+j move workspace to output left
+    $mod+Ctrl+semicolon move workspace to output right
 
     # scratchpad
     $mod+Ctrl+Shift+minus move scratchpad
@@ -212,7 +214,8 @@ input type:keyboard {
 }
 
 input type:pointer {
-    pointer_accel -0.8 # set mouse sensitivity (between -1 and 1)
+    accel_profile "adaptive"
+    pointer_accel -0.7 # set mouse sensitivity (between -1 and 1)
 }
 
 ### Bars
