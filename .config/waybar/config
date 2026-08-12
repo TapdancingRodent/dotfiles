@@ -14,6 +14,8 @@
         "custom/divider",
         "network#wifi",
         "custom/divider",
+        "backlight",
+        "custom/divider",
         "battery",
         "custom/divider",
         "pulseaudio",
@@ -36,6 +38,12 @@
         "format": "{name}"
     },
 
+
+    "backlight": {
+	    "device": "intel_backlight",
+	    "format": "{percent}% {icon}",
+	    "format-icons": ["○", "◐", "●"]
+    },
     "battery": {
         "interval": 5,
         "states": {
@@ -45,13 +53,7 @@
         },
         "format": "{capacity:3}% {icon}",
         "format-charging": "{capacity:3}% ",
-        "format-icons": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
+        "format-icons": ["","","","",""]
     },
     "clock": {
         "format": "{:%Y-%m-%d %H:%M}",
@@ -82,21 +84,17 @@
     },
     "network#wifi": {
         "interface": "wlan0",
-        "format-disconnected": "",
-        "format-wifi": "{essid} ",
-        "tooltip-format-wifi": "{essid} {signalStrength:2}%"
+        "format-disconnected": "down ",
+        "format-wifi": "{essid} {signalStrength}% "
     },
     "pulseaudio": {
         "format": "{volume:3}% {icon}",
-        "format-bluetooth": "{volume:3}%  {icon}",
+        "format-bluetooth": "{volume:3}% ",
         "format-icons": {
-            "default": [
-                "",
-                ""
-            ],
-            "headphones": ""
+            "default": ["🔈","🔉","🔊"],
+            "headphone": ""
         },
-        "format-muted": "MUTE {icon}",
+        "format-muted": "{volume:3}% X",
         "on-click": "pamixer -t",
         "on-click-right": "pavucontrol",
         "scroll-step": 5
