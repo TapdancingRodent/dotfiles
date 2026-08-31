@@ -15,10 +15,10 @@ client.unfocused #000000 #000000 #ffffff
 output {
     eDP-1 {
         bg /home/sardines/Pictures/Backgrounds/2a8521aeaff1af02d55935d10fee1d82f9f7b433_darkened.jpeg fill
-        resolution 2256x1504 position 1920,0 scale 1.5
+        resolution 2256x1504 position 0,0 scale 1.5
     }
     'Dell Inc. DELL P2419H 47FSH73' {
-        resolution 1920x1080 position 0,0 scale 1
+        resolution 1920x1080 position 1504,0 scale 0.8
     }
 }
 
