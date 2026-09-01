@@ -1,1 +1,18 @@
 README.md
+
+{{- if ne .chezmoi.username "clan" }}
+.config/i3
+.config/i3status
+.config/sway
+.config/waybar
+.config/wofi
+{{- end }}
+
+{{- if ne .chezmoi.os "linux" }}
+.gitconfig
+{{- end }}
+
+{{- if ne .chezmoi.os "darwin" }}
+.aerospace.toml
+.zshrc
+{{- end }}
