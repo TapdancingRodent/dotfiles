@@ -130,8 +130,7 @@ automatically-unhide-macos-hidden-apps = true
     esc = 'mode main'
 
 [workspace-to-monitor-force-assignment]
-    1 = 1
-    10 = ['^built-in retina display$', 2]
+    10 = ['^built-in retina display$']
 
 [[on-window-detected]]
   if.app-id = 'com.apple.finder'
