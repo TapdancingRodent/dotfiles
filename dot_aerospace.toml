@@ -137,14 +137,6 @@ automatically-unhide-macos-hidden-apps = true
   run = 'layout floating'
 
 [[on-window-detected]]
-    if.app-id = 'com.google.Chrome'
-    run = 'move-node-to-workspace 1'
-
-[[on-window-detected]]
-    if.window-title-regex-substring = 'Learning - Google Chrome'
-    run = 'move-node-to-workspace 4'
-
-[[on-window-detected]]
     if.app-id = 'org.keepassx.keepasxc'
     run = 'move-node-to-workspace 5'
 
@@ -167,7 +159,3 @@ automatically-unhide-macos-hidden-apps = true
 [[on-window-detected]]
     if.app-id = 'com.tinyspeck.slackmacgap'
     run = 'move-node-to-workspace 0'
-
-[[on-window-detected]]
-    if.window-title-regex-substring = 'Sounds - Google Chrome'
-    run = 'move-node-to-workspace −' # - is reserved, this is true minus (unicode 2212)
