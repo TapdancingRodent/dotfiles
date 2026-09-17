@@ -91,7 +91,7 @@ automatically-unhide-macos-hidden-apps = true
     alt-7 = 'workspace 7'
     alt-8 = 'workspace 8'
     alt-9 = 'workspace 9'
-    alt-0 = 'workspace 0'
+    alt-0 = 'workspace 10'
     alt-minus = 'workspace −' # - is reserved, this is true minus (unicode 2212)
     alt-equal = 'workspace =' # + is reserved, this is true minus (unicode 2212)
 
@@ -104,7 +104,7 @@ automatically-unhide-macos-hidden-apps = true
     alt-shift-7 = 'move-node-to-workspace 7'
     alt-shift-8 = 'move-node-to-workspace 8'
     alt-shift-9 = 'move-node-to-workspace 9'
-    alt-shift-0 = 'move-node-to-workspace 0'
+    alt-shift-0 = 'move-node-to-workspace 10'
     alt-shift-minus = 'move-node-to-workspace −' # - is reserved, this is true minus (unicode 2212)
     alt-shift-equal = 'move-node-to-workspace =' # - is reserved, this is true minus (unicode 2212)
 
@@ -154,8 +154,8 @@ automatically-unhide-macos-hidden-apps = true
 
 [[on-window-detected]]
     if.app-id = 'com.microsoft.Outlook'
-    run = 'move-node-to-workspace 0'
+    run = 'move-node-to-workspace 10'
 
 [[on-window-detected]]
     if.app-id = 'com.tinyspeck.slackmacgap'
-    run = 'move-node-to-workspace 0'
+    run = 'move-node-to-workspace 10'
