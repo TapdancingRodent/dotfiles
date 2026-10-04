@@ -8,15 +8,19 @@ window#waybar {
     color: #fdf6e3;
 }
 
-
 #battery {
     color: #ffffff;
 }
 #battery.warning {
     color: #cf8080;
+    font-weight: bold;
 }
 #battery.critical {
     color: #ff0000;
+    font-weight: bold;
+}
+#clock {
+    font-weight: bold;
 }
 #network {
     color: #00ff00;
@@ -27,6 +31,17 @@ window#waybar {
 #network.disconnected {
     color: #ffffff;
 }
+#temperature {
+    color: #ffffff;
+}
+#temperature.warning {
+    color: #cf8080;
+    font-weight: bold;
+}
+#temperature.critical {
+    color: #ff0000;
+    font-weight: bold;
+}
 #workspaces button {
     background: #1a1a1a;
     border-radius: 0px;
@@ -35,8 +50,9 @@ window#waybar {
 }
 #workspaces button.focused {
     background: #425b82;
-    color: #ffffff;
     border: #ffffff;
+    color: #ffffff;
+    font-weight: bold;
 }
 #workspaces button:hover {
     box-shadow: inherit;
@@ -44,5 +60,6 @@ window#waybar {
 
     background: #425b82;
     color: #ffffff;
+    font-weight: bold;
 }
 

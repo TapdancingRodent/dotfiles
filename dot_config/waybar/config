@@ -14,12 +14,6 @@
         "custom/divider",
         "network#wifi",
         "custom/divider",
-        "backlight",
-        "custom/divider",
-        "battery",
-        "custom/divider",
-        "pulseaudio",
-        "custom/divider",
         "disk",
         "custom/divider",
         "cpu",
@@ -28,9 +22,15 @@
         "custom/divider",
         "temperature",
         "custom/divider",
-        "clock",
+        "backlight",
         "custom/divider",
-        "tray"
+        "pulseaudio",
+        "custom/divider",
+        "battery",
+        "custom/divider",
+        "tray",
+        "custom/divider",
+        "clock"
     ],
 
     "sway/workspaces": {
@@ -56,7 +56,7 @@
         "format-icons": ["","","","",""]
     },
     "clock": {
-        "format": "{:%Y-%m-%d %H:%M}",
+        "format": "{:%H:%M}",
         "tooltip": false
     },
     "cpu": {
@@ -98,6 +98,11 @@
         "on-click": "pamixer -t",
         "on-click-right": "pavucontrol",
         "scroll-step": 5
+    },
+    "temperature": {
+        "warning-threshold": 75,
+        "critical-threshold": 85,
+        "format": "{temperatureC:3}°C"
     },
     "tray": {
         "icon-size": 20
