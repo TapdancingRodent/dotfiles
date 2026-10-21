@@ -6,6 +6,7 @@ endif
 
 set autoindent
 set expandtab
+set mouse=v
 set shiftwidth=4
 set smarttab
 set softtabstop=4
