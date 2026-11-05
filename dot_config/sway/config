@@ -23,9 +23,10 @@ output {
 }
 
 ### Idle configuration
-exec_always killall swayidle; swayidle -w \
+exec_always killall swayidle | true; swayidle -w \
+    timeout 585 'light -S 2' resume 'light -I' \
     timeout 600 'swaylock -f -c 212F3C' \
-    timeout 1200 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
+    timeout 1800 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
     before-sleep 'swaylock -f -c 212F3C'
 
 for_window {
@@ -36,8 +37,8 @@ for_window {
 ### Keys
 bindsym {
     # Use pactl to adjust volume in PulseAudio.
-    XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5%
-    XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5%
+    XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10%
+    XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10%
     XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
 
     # Use playerctl to broadcast media keys
@@ -45,9 +46,9 @@ bindsym {
     XF86AudioPrev exec playerctl previous
     XF86AudioNext exec playerctl next
 
-    # Handle backlight
-    XF86MonBrightnessUp exec light -A 10
-    XF86MonBrightnessDown exec light -U 10
+    # Handle backlight$
+    XF86MonBrightnessUp exec light -A 10; light -O
+    XF86MonBrightnessDown exec light -U 10; light -O
 }
 
 # Use Mouse+$mod to drag floating windows to their wanted position
